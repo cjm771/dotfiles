@@ -1,0 +1,36 @@
+{
+  "workbench.colorTheme": "Monokai",
+  "editor.tabSize": 2,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.enablePreview": false,
+  "highlight.regexes": {
+      // angularjs syntax highlighting
+      "(ng-[^\\s]+?)(\\s*)(=)(\\s*)(\")(.+?)(\")" : { // A regex will be created from this string, don't forget to double escape it
+          "regexFlags": "g", // Flags used when building this regex
+          "filterLanguageRegex": "html", // Apply only if current file's language matches this regex. Requires double escaping
+          "decorations": [ // Decoration options to apply to the capturing groups
+              { "color": "#b464ff" }, // Decoration options to apply to the first capturing group, in this case "//TODO"
+              { "color": "" },
+              { "color": "" },
+              { "color": "" },
+              { "color": "" },
+              { "color": "#00ced1" },
+              { "color": "" }
+          ]
+      },
+      "(ng-.+?)\\s" : { // A regex will be created from this string, don't forget to double escape it
+          "regexFlags": "g", // Flags used when building this regex
+          "filterLanguageRegex": "html", // Apply only if current file's language matches this regex. Requires double escaping
+          "decorations": [ // Decoration options to apply to the capturing groups
+              { "color": "#b464ff" } // Decoration options to apply to the first capturing group, in this case "//TODO"
+          ]
+      },
+      "({{.+}})": { // A regex will be created from this string, don't forget to double escape it
+          "regexFlags": "g", // Flags used when building this regex
+          "filterLanguageRegex": "html", // Apply only if current file's language matches this regex. Requires double escaping
+          "decorations": [ // Decoration options to apply to the capturing groups
+              { "color": "#00ced1" }, // Decoration options to apply to the first capturing group, in this case "//TODO"
+          ]
+      }
+  }
+}
